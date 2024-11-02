@@ -27,13 +27,9 @@ void Grid::addMotif(int type, int bottom_corner_y, Color c){
 }
 
 void Grid::Draw(){
-    //std::cout << height << " " << width << std::endl;
     for(int i = 0; i < height; i++){
         for(int j = 0; j < width; j++){
-            //std::cout << i << " "  << j << std::endl;
-            std::cout << grid_[i][j].r << " "; 
-            DrawRectangle(i*cellSize + 1 , j * cellSize + 1, cellSize -1  ,cellSize -1, grid_[i][j]);
+            DrawRectangle(j * cellSize  , i * cellSize, cellSize-1   ,cellSize-1, grid_[i][j]);
         }
-        std::cout<< std::endl;
     }
 }
