@@ -1,25 +1,22 @@
 #include <raylib.h>
-#include "ball.h"
+#include "grid.h"
 
 int main() 
 {
-    const Color darkGreen = {20, 160, 133, 255};
-    
-    constexpr int screenWidth = 800;
+    const Color darkBlue = {44, 44 , 127, 255};
+    constexpr int screenWidth = 300;
     constexpr int screenHeight = 600;
     
-    Ball ball;
     
     InitWindow(screenWidth, screenHeight, "My first RAYLIB program!");
     SetTargetFPS(60);
+    Grid g = Grid();
     
     while (!WindowShouldClose())
-    {
-        ball.Update();
-        
+    {   
         BeginDrawing();
-            ClearBackground(darkGreen);
-            ball.Draw();
+            ClearBackground(darkBlue);
+            g.Draw();
         EndDrawing();
     }
     
